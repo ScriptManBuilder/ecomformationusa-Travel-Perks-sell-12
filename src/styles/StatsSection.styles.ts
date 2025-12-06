@@ -118,7 +118,7 @@ export const StatsGrid = styled.div`
 `;
 
 export const StatCard = styled.div<{ $background: string }>`
-  padding: 2.5rem;
+  padding: 2.5rem 2rem;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -127,6 +127,12 @@ export const StatCard = styled.div<{ $background: string }>`
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 320px;
 
   &::before {
     content: '';
@@ -194,37 +200,57 @@ export const StatCard = styled.div<{ $background: string }>`
 
 export const StatTitle = styled.h3`
   font-size: 1.15rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
   opacity: 0.95;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.01em;
+  text-align: center;
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StatDescription = styled.p`
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
   opacity: 0.7;
   line-height: 1.6;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StatValue = styled.div`
   font-size: 3.5rem;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
   
   &::after {
     content: '';
     position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #C084FC, transparent);
+    background: linear-gradient(90deg, #C084FC 0%, rgba(192, 132, 252, 0.3) 100%);
     border-radius: 2px;
   }
 

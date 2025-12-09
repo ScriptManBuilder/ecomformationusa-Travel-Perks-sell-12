@@ -14,7 +14,9 @@ import {
   ContactItem,
   ContactLabel,
   ContactValue,
-  FooterBottom
+  FooterBottom,
+  PaymentIcons,
+  PaymentIcon
 } from '../styles/Footer.styles';
 
 const Footer: React.FC = () => {
@@ -53,6 +55,15 @@ const Footer: React.FC = () => {
               <p>{companyAddress}</p>
               <p>Established {process.env.REACT_APP_COMPANY_BIRTH || 'October 2025'}</p>
             </CompanyInfo>
+            
+           <PaymentIcons>
+              <PaymentIcon>
+                <img src="/visa.svg" alt="Visa" />
+              </PaymentIcon>
+              <PaymentIcon>
+                <img src="/mastercard.svg" alt="Mastercard" />
+              </PaymentIcon>
+            </PaymentIcons>
           </FooterSection>
 
           <FooterSection>
